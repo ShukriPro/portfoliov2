@@ -6,7 +6,6 @@ import AboutScreen from "./screens/AboutScreen";
 import ProjectScreen from "./screens/ProjectScreen";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Navigation from "./components/Navigation";
 
 function App() {
   
@@ -16,8 +15,18 @@ function App() {
 
   return (
     <div className="container">
-      <Navigation/>
-      <ProjectScreen/>
+      <div data-aos="fade-up">
+        <HomeScreen />
+      </div>
+      <div data-aos="fade-right">
+        <ProjectScreen />
+      </div>
+      <div data-aos="fade-up">
+        <AboutScreen />
+      </div>
+      <div data-aos="fade-up">
+        <QualificationScreen />
+      </div>
     </div>
   );
 }
